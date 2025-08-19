@@ -18,30 +18,9 @@ export default function Home() {
         imageSrc="/images/reel-cover.svg"
         imageAlt="Selected work"
       />
-      <About />
       <Projects />
       <SiteFooter />
     </main>
-  )
-}
-
-
-
-function About() {
-  return (
-    <section id="about" className="mx-auto w-full max-w-6xl grid grid-cols-1 gap-8 px-4 py-24 md:grid-cols-3">
-      <div className="md:col-span-1">
-        <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">About</h2>
-      </div>
-      <div className="prose prose-invert md:col-span-2">
-        <p>
-          I shape pace, emotion, and clarity. I work across commercials, MV, and narrative with a toolbox spanning color, motion, and VFX.
-        </p>
-        <p className="text-muted-foreground">
-          Toolchain: Premiere Pro / Resolve, After Effects, Fusion, and a sprinkle of generative AI when it serves the story.
-        </p>
-      </div>
-    </section>
   )
 }
 

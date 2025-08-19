@@ -3,7 +3,6 @@
 import * as React from "react"
 import {
   Home as HomeIcon,
-  Info,
   Folder,
   Mail,
 } from "lucide-react"
@@ -25,7 +24,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   // Minimal site sidenav
   const primary = [
     { title: "Home", href: "/", icon: HomeIcon },
-    { title: "About", href: "#about", icon: Info },
     { title: "Projects", href: "#projects", icon: Folder },
     { title: "Contact", href: "#contact", icon: Mail },
   ]

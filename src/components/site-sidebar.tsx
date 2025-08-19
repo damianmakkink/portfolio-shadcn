@@ -25,14 +25,7 @@ export function SiteSidebar({ className, ...props }: React.ComponentProps<typeof
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild>
-              <Link href="/#about">
-                <Info />
-                <span>About</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
+
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/#projects">

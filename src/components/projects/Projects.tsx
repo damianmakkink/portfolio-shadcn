@@ -46,7 +46,7 @@ export function Projects() {
   )
 
   return (
-    <section id="projects" className="mx-auto w-full max-w-6xl px-4 py-24">
+    <section id="projects" className="mx-auto w-full max-w-6xl px-4 pt-12 pb-16 md:pt-14 md:pb-20">
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Projects</h2>
       </div>
