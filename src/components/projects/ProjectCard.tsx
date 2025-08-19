@@ -8,7 +8,11 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { cn } from "@/lib/utils"
 import type { Project } from "./types"
 
-export function ProjectCard({ project, href }: { project: Project; href?: string }) {
+export function ProjectCard({
+  project,
+  href,
+  onOpenVideo,
+}: { project: Project; href?: string; onOpenVideo?: (p: Project) => void }) {
   const link = href ?? (project.slug ? `/projects/${project.slug}` : "#")
 
   const meta = [
@@ -20,7 +24,17 @@ export function ProjectCard({ project, href }: { project: Project; href?: string
     .join(" · ")
 
   return (
-    <Link href={link} aria-label={`View project: ${project.title}`} className="group block outline-none rounded-2xl">
+    <Link
+      href={link}
+      aria-label={`View project: ${project.title}`}
+      className="group block outline-none rounded-2xl"
+      onClick={(e) => {
+        if (onOpenVideo && project.youtubeId) {
+          e.preventDefault()
+          onOpenVideo(project)
+        }
+      }}
+    >
       <Card
         className={cn(
           "overflow-hidden rounded-2xl border bg-card transition-colors gap-0 py-0",

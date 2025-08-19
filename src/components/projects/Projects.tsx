@@ -5,12 +5,21 @@ import { useMemo, useState } from "react"
 import { ProjectCard } from "./ProjectCard"
 import { projects as ALL, TAGS } from "../../../projects"
 
+import type { Project } from "./types"
+import { VideoDialog } from "./VideoDialog"
+
 
 export function Projects() {
+  // Dialog state
+  const [videoOpen, setVideoOpen] = useState(false)
+  const [videoProject, setVideoProject] = useState<Project | null>(null)
+  const openVideo = (p: Project) => {
+    setVideoProject(p)
+    setVideoOpen(true)
+  }
+
   // Filter state (single-select)
   const [active, setActive] = useState<string>("All")
-
-
 
   // Filtered list
   const filtered = useMemo(
@@ -49,9 +58,17 @@ export function Projects() {
             <p>No projects match this tag.</p>
           </div>
         ) : (
-          filtered.map((p) => <ProjectCard key={p.id} project={p} />)
+          filtered.map((p) => (
+            <ProjectCard key={p.id} project={p} onOpenVideo={openVideo} />
+          ))
         )}
       </div>
+
+      <VideoDialog
+        open={videoOpen}
+        onOpenChange={setVideoOpen}
+        youtubeId={videoProject?.youtubeId}
+      />
     </section>
   )
 }

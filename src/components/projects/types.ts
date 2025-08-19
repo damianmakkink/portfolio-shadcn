@@ -9,5 +9,6 @@ export type Project = {
   client?: string
   role?: string[]
   createdAt?: string // ISO, used for Latest fallback
+  youtubeId?: string // NEW: optional YouTube video id
 }
 

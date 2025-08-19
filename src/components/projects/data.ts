@@ -12,6 +12,7 @@ export const projects: Project[] = [
     client: "Athletic Brand",
     role: ["Editor", "Color"],
     createdAt: "2024-08-01T12:00:00Z",
+    youtubeId: "dQw4w9WgXcQ", // NEW placeholder
   },
   {
     id: "p2",
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     client: "Artist",
     role: ["Editor", "Motion"],
     createdAt: "2024-01-15T12:00:00Z",
+    youtubeId: "M7lc1UVf-VE", // NEW placeholder
   },
   {
     id: "p4",
