@@ -102,7 +102,8 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.216 0.006 56.043);
+  /* Match sidebar to page background for minimal black look */
+  --sidebar: var(--background);
   --sidebar-foreground: oklch(0.985 0.001 106.423);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
@@ -111,6 +112,11 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.553 0.013 58.071);
 }
+
+:root{
+  --top-nav-height: 3rem; /* 48px header height */
+}
+
 
 @layer base {
   * {

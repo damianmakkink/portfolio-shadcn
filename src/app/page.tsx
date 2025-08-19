@@ -1,7 +1,6 @@
 "use client"
 
 
-import { Button } from "@/components/ui/button"
 import { Projects } from "@/components/projects/Projects"
 import { Hero115 } from "@/components/hero115"
 
@@ -9,7 +8,7 @@ import { Hero115 } from "@/components/hero115"
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <SiteNav />
+
       <Hero115
         icon={null}
         heading="Video Editor"
@@ -26,26 +25,6 @@ export default function Home() {
   )
 }
 
-function SiteNav() {
-  return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto w-full max-w-6xl flex h-14 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded-sm bg-foreground" />
-          <span className="text-sm font-medium tracking-wider">SAHIL LULLA</span>
-        </div>
-        <nav className="hidden gap-6 text-sm md:flex">
-          <a href="#about" className="text-muted-foreground hover:text-foreground">About</a>
-          <a href="#projects" className="text-muted-foreground hover:text-foreground">Projects</a>
-          <a href="#contact" className="text-muted-foreground hover:text-foreground">Contact</a>
-        </nav>
-        <div className="flex items-center gap-2">
-          <Button size="sm">Get in touch</Button>
-        </div>
-      </div>
-    </header>
-  )
-}
 
 
 function About() {

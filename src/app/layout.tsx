@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import { SiteSidebar } from "@/components/site-sidebar";
+import { TopNav } from "@/components/layout/top-nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <SidebarProvider>
+          <SiteSidebar />
+          <TopNav />
+          <SidebarInset className="pt-[var(--top-nav-height)]">{children}</SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );
