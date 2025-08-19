@@ -8,6 +8,33 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { cn } from "@/lib/utils"
 import type { Project } from "./types"
 
+function extractYouTubeId(input?: string): string | undefined {
+  if (!input) return undefined
+  // If it's already an ID (no URL), return as-is
+  if (!/^https?:\/\//.test(input)) return input
+  try {
+    const u = new URL(input)
+    // youtu.be/<id>
+    if (u.hostname.includes("youtu")) {
+      if (u.pathname.startsWith("/watch")) {
+        return u.searchParams.get("v") || undefined
+      }
+      const parts = u.pathname.split("/").filter(Boolean)
+      // /shorts/<id> or /embed/<id> or /<id>
+      return parts[1] || parts[0]
+    }
+  } catch {}
+  return undefined
+}
+
+type MaybeVideoUrl = { videoUrl?: string }
+function getProjectYouTubeId(project: Project | MaybeVideoUrl): string | undefined {
+  const id = (project as Project).youtubeId
+  const url = (project as MaybeVideoUrl).videoUrl
+  return extractYouTubeId(id ?? url)
+}
+
+
 export function ProjectCard({
   project,
   href,
@@ -29,7 +56,7 @@ export function ProjectCard({
       aria-label={`View project: ${project.title}`}
       className="group block outline-none rounded-2xl"
       onClick={(e) => {
-        if (onOpenVideo && project.youtubeId) {
+        if (onOpenVideo && getProjectYouTubeId(project)) {
           e.preventDefault()
           onOpenVideo(project)
         }

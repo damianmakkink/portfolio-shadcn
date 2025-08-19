@@ -8,6 +8,21 @@ import { projects as ALL, TAGS } from "../../../projects"
 import type { Project } from "./types"
 import { VideoDialog } from "./VideoDialog"
 
+// Helper to accept either youtubeId (id) or videoUrl (full URL) from /projects.ts
+const extractYouTubeId = (input?: string): string | undefined => {
+  if (!input) return undefined
+  if (!/^https?:\/\//.test(input)) return input
+  try {
+    const u = new URL(input)
+    if (u.hostname.includes("youtu")) {
+      if (u.pathname.startsWith("/watch")) return u.searchParams.get("v") || undefined
+      const parts = u.pathname.split("/").filter(Boolean)
+      return parts[1] || parts[0]
+    }
+  } catch {}
+  return undefined
+}
+
 
 export function Projects() {
   // Dialog state
@@ -17,6 +32,9 @@ export function Projects() {
     setVideoProject(p)
     setVideoOpen(true)
   }
+  const activeYouTubeId: string | undefined = extractYouTubeId(
+    videoProject?.youtubeId
+  ) ?? extractYouTubeId((videoProject as unknown as { videoUrl?: string })?.videoUrl)
 
   // Filter state (single-select)
   const [active, setActive] = useState<string>("All")
@@ -67,7 +85,8 @@ export function Projects() {
       <VideoDialog
         open={videoOpen}
         onOpenChange={setVideoOpen}
-        youtubeId={videoProject?.youtubeId}
+        youtubeId={activeYouTubeId}
+        project={videoProject ?? undefined}
       />
     </section>
   )
