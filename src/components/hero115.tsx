@@ -1,6 +1,7 @@
 import { Wifi, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 interface Hero115Props {
   icon?: React.ReactNode;
@@ -34,16 +35,14 @@ const Hero115 = ({
       <div className="mx-auto w-full max-w-6xl px-4">
         <div className="flex flex-col gap-6">
           {/* Video/cover first */}
-          <div id="reel" className="relative scroll-mt-[var(--top-nav-height,64px)]">
-            <img
-              src={imageSrc}
-              alt={imageAlt}
-              className="h-full max-h-[524px] w-full rounded-2xl object-cover"
-            />
+          <div id="reel" className="relative mb-8 md:mb-12 scroll-mt-[var(--top-nav-height,64px)] rounded-lg overflow-hidden border border-foreground/10 bg-background/5">
+            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/25 to-transparent" />
+            <img src={imageSrc} alt={imageAlt} className="w-full aspect-[16/9] object-cover" />
+            <div className="absolute top-2 left-2 text-xs text-foreground/75 px-2 py-1 rounded-sm border border-foreground/15 bg-background/40">Selected work</div>
           </div>
 
           {/* Copy block below in a split layout */}
-          <div className="relative grid items-start gap-6 md:grid-cols-2">
+          <div className="relative grid items-start gap-6 md:grid-cols-[1fr_minmax(320px,420px)] md:gap-10">
             {/* subtle radial lines backdrop (kept but lighter impact)*/}
             <div
               style={{ transform: "translate(-50%, -50%)" }}
@@ -60,19 +59,30 @@ const Hero115 = ({
                   {icon}
                 </span>
               )}
-              <h2 className="max-w-3xl text-left text-4xl font-medium text-balance md:text-6xl">
-                {heading}
-              </h2>
+              <LazyMotion features={domAnimation}>
+                <m.h2
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.6 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="max-w-3xl text-left text-4xl md:text-5xl leading-tight tracking-[-0.02em] font-medium text-balance"
+                >
+                  {heading}
+                </m.h2>
+              </LazyMotion>
             </div>
 
             <div className="flex flex-col gap-3">
-              <p className="max-w-xl text-left text-muted-foreground md:text-lg">
+              <p className="text-base md:text-[17px] leading-relaxed text-muted-foreground max-w-[65ch]">
                 {description}
               </p>
               <div className="flex items-center gap-3">
-                <Button size="lg" asChild>
+                <Button
+                  asChild
+                  className="rounded-full bg-white text-black px-4 py-2 text-sm md:text-[15px] font-medium hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                >
                   <a href={button.url}>
-                    {button.text} {button.icon}
+                    {button.text}
                   </a>
                 </Button>
               </div>

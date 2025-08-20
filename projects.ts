@@ -21,7 +21,7 @@ export const projects: Project[] = [
     "id": "p1",
     "title": "Enigma",
     "slug": "enigma",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17HPYwULrftrNuioa_YfPT_2UWb1vyu2Ovl-wC1nHq6Q020ZH_SEwHy0JFG_PCBqFsjXw4FK2XVllSi0M8yCUVywBjwEKoj9-T_laCP49aPzC3ttIwQBt5niD30pnHtyBt3nTkeU=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/enigma.png",
     "year": 2025,
     "durationSec": 15,
     "tags": [
@@ -39,13 +39,13 @@ export const projects: Project[] = [
     "createdAt": "2025-01-01T00:00:00Z",
     "videoUrl": "https://youtube.com/shorts/guyubh5aufQ",
     "studio": "Bitrate Bash",
-    "platform": "Internal"
+    "platform": "Bitrate Bash"
   },
   {
     "id": "p2",
     "title": "The Red Lantern",
     "slug": "the-red-lantern",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17Eamd-SRXXkhsAdp2L9uEb8aeJSUFtxLAMR-LeO3epK1R4sVccTHOQtn4qIwykbmW00JWW3wMYkX8CaHlN5fHRmxRE_ctr2Kcjeyq1DJWBZ4k540ZF3ILzd4W_iQdi0Dnd8TAqq=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/the-red-lantern.png",
     "year": 2025,
     "durationSec": 15,
     "tags": [
@@ -63,14 +63,14 @@ export const projects: Project[] = [
     "createdAt": "2025-01-01T00:00:00Z",
     "videoUrl": "https://youtu.be/I5a-PhERRpQ",
     "studio": "Bitrate Bash",
-    "platform": "Internal",
+    "platform": "Bitrate Bash",
     "notes": "Results: 50% decrease in cost per minute."
   },
   {
     "id": "p3",
     "title": "Hype Reel",
     "slug": "hype-reel",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17E0dOoKwWUewLJv0i2D8bn-4kWwEaPoATcLJLSP7LxIReZW_Cch24VO-h7nq9ZBAFBu3zNZ7UPaLRV7z9f2zsTAo3BLNPZw_LNdskPB1gRQmszLZh0-0ylUWwa5Wgn3l_-lFYL7=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/hype-reel.png",
     "year": 2025,
     "durationSec": 60,
     "tags": [
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     "id": "p5",
     "title": "More than a League - Teaser",
     "slug": "more-than-a-league-teaser",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17EcJjv-5kUST8ZGNUClfa24hnJG9G7MrMdal6FRmCEfgHppodf7_kBGis1lsFzXiKDG3llqfcaObq8-TvWiQpy_QMx22AwAeNc33qi4WQtZwOvBFJK5smxutwmeSLhCHU25HZCP=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/more-than-a-league-teaser.png",
     "year": 2025,
     "durationSec": 15,
     "tags": [
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     "id": "p6",
     "title": "The Nomadic Supper",
     "slug": "the-nomadic-supper",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17FguahG5l1bGGFh2j5dB3hPM7Sm36iRuGHNCXDJETRz3YKFBBC9TFPiqoQWz3G7W-KATCPPIBEkzAlBIb7OXkUUs7dlm1j0ZlXkMtUqjsiDo1WwqwZrsKJ_YCa7f1mSIZuftoLO=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/the-nomadic-supper.png",
     "year": 2025,
     "durationSec": 15,
     "tags": [
@@ -142,7 +142,7 @@ export const projects: Project[] = [
       "Edit",
       "Color"
     ],
-    "client": "Internal",
+    "client": "Bitrate Bash",
     "role": [
       "Director"
     ],
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     "id": "p7",
     "title": "Inhibited",
     "slug": "inhibited",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17FC6gMUcZgiIES7GfKOUypBciGISMtkrsQkTzLtwhiQLbXa5fd-3FPCLrC0k3O-BQSCiSQXfSRuATVP6fCG_DImP-IGMgy56lTgZ3lTFV0CLjJ4HsG23mLWY2vT7fppRKdCfnih=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/inhibited.jpeg",
     "year": 2018,
     "durationSec": 15,
     "tags": [
@@ -165,7 +165,7 @@ export const projects: Project[] = [
       "Edit",
       "Color"
     ],
-    "client": "Internal",
+    "client": "George Brown College",
     "role": [
       "Director",
       "Writer",
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     "id": "p8",
     "title": "Optillus",
     "slug": "optillus",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17FIcvvDE-li-IzlAhFDn37odiRkBU8U0wRdvVRsIm6bMV4l_IJkzZ5HfD8M31S4T1fuFkZlPoTtNHBDHmoMr4G2f3hRxn-iN_L-zuOjcWxxwMf7Xb6L9Wm5BlsM38fERJZf_FKQ=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/optillus.jpeg",
     "year": 2023,
     "durationSec": 15,
     "tags": [
@@ -189,7 +189,7 @@ export const projects: Project[] = [
       "Edit",
       "Color"
     ],
-    "client": "John Babu",
+    "client": "Paradiso Films",
     "role": [
       "Head of Post"
     ],
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     "id": "p9",
     "title": "Intextigator",
     "slug": "intextigator",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17GTpidrDS_93d9IDKk3axYEVB-tEgucbK5bq_nBx0jbgNByXKPiMBNUKwsuQgefNxaQkWKfyASK_Nt75dAJEwRTptiGzSlehPb5LAP0ABXVER46rA82hSBHv3J6ZexV-vZvyWrp=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/intextigator.jpeg",
     "year": 2022,
     "durationSec": 15,
     "tags": [
@@ -211,7 +211,7 @@ export const projects: Project[] = [
       "Edit",
       "Color"
     ],
-    "client": "John Babu",
+    "client": "Paradiso Films",
     "role": [
       "Head of Post"
     ],
@@ -234,7 +234,7 @@ export const projects: Project[] = [
       "Edit",
       "Color"
     ],
-    "client": "Internal",
+    "client": "SM Films",
     "role": [
       "Director",
       "Writer",
@@ -249,7 +249,7 @@ export const projects: Project[] = [
     "id": "p11",
     "title": "Death and Life of a Can",
     "slug": "death-and-life-of-a-can",
-    "cover": "/posters/placeholder.jpg",
+    "cover": "/thumbnails/death-and-life-of-a-can.png",
     "year": 2013,
     "durationSec": 15,
     "tags": [
@@ -258,7 +258,7 @@ export const projects: Project[] = [
       "Edit",
       "Color"
     ],
-    "client": "Internal",
+    "client": "SM Films",
     "role": [
       "Director",
       "Writer",
@@ -273,7 +273,7 @@ export const projects: Project[] = [
     "id": "p12",
     "title": "Sarfira Theatrical Trailer",
     "slug": "sarfira-theatrical-trailer",
-    "cover": "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17EdajXweKo-gbd-xzSW83wdX2YFGM3Apc6DFzKK5ZreQ4xAiM6t7skDUCG_vsUZ_nx2DAcmuKEohvGFmM1uMzIS8q-DbEpe_bRzAm7g5dlqWcS-kkkv3Hj2_btqtqwLII9hXcKy=w597-h390?key=WkjoRv8_sp9eZfEYes-GPQ",
+    "cover": "/thumbnails/sarfira-theatrical-trailer.png",
     "year": 2024,
     "durationSec": 15,
     "tags": [
@@ -296,12 +296,10 @@ export const projects: Project[] = [
 export const TAGS = [
   "All",
   "AI",
-  "Color",
   "Docu",
   "Edit",
   "Narrative",
   "Production",
   "Promo",
-  "R&D",
-  "VFX"
+  "R&D"
 ] as const;

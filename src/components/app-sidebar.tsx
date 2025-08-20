@@ -33,7 +33,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <div className="flex items-center gap-2 px-2 py-2">
           <div className="size-5 rounded-sm bg-foreground" />
-          <span className="text-sm font-semibold">SAHIL LULLA</span>
+          <span className="text-sm font-semibold">Sonya Moorjani</span>
         </div>
       </SidebarHeader>
       <SidebarContent>

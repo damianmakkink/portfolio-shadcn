@@ -1,6 +1,23 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useMemo, useState, type ReactNode } from "react"
+import { LazyMotion, domAnimation, m } from "framer-motion"
+
+import { Asterisk, Bot, Palette, FileText, Scissors, BookOpenText, Factory, Megaphone, FlaskConical, Sparkles } from "lucide-react"
+
+// Icon mapping for tag labels (h-4 w-4)
+const TAG_ICON: Record<string, ReactNode> = {
+  All: <Asterisk className="h-4 w-4" aria-hidden={true} />,
+  AI: <Bot className="h-4 w-4" aria-hidden={true} />,
+  Color: <Palette className="h-4 w-4" aria-hidden={true} />,
+  Docu: <FileText className="h-4 w-4" aria-hidden={true} />,
+  Edit: <Scissors className="h-4 w-4" aria-hidden={true} />,
+  Narrative: <BookOpenText className="h-4 w-4" aria-hidden={true} />,
+  Production: <Factory className="h-4 w-4" aria-hidden={true} />,
+  Promo: <Megaphone className="h-4 w-4" aria-hidden={true} />,
+  "R&D": <FlaskConical className="h-4 w-4" aria-hidden={true} />,
+  VFX: <Sparkles className="h-4 w-4" aria-hidden={true} />,
+}
 
 import { ProjectCard } from "./ProjectCard"
 import { projects as ALL, TAGS } from "../../../projects"
@@ -46,41 +63,70 @@ export function Projects() {
   )
 
   return (
-    <section id="projects" className="mx-auto w-full max-w-6xl px-4 pt-12 pb-16 md:pt-14 md:pb-20">
-      <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Projects</h2>
+    <section id="projects" className="mx-auto w-full max-w-6xl px-4 md:px-6 pt-12 md:pt-16 pb-20 md:pb-24">
+      <div className="mb-4 flex items-center justify-between">
+        <LazyMotion features={domAnimation}>
+          <m.h2
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="text-3xl md:text-4xl leading-tight tracking-[-0.01em] font-semibold"
+          >
+            Projects
+          </m.h2>
+        </LazyMotion>
       </div>
 
-      {/* Top tags bar — sharp edge, negative space */}
-      <div className="mb-6 flex flex-wrap items-center gap-1">
+      {/* Tag row — Variant A: underline micro-nav with icons */}
+      <div className="mb-6 md:mb-8 flex flex-wrap items-center gap-5 md:gap-7">
         {TAGS.map((t) => (
           <button
             key={t}
             onClick={() => setActive(t)}
-            aria-current={active === t ? "true" : undefined}
+            aria-pressed={active === t}
             className={[
-              "px-2 py-1 text-sm",
-              "rounded-none",
-              "text-muted-foreground hover:text-foreground",
-              active === t ? "bg-muted/30 text-foreground" : "bg-transparent",
+              // Base micro-typography
+              "relative inline-flex h-10 items-center gap-2 px-1.5 py-2 uppercase tracking-[0.14em] text-[11px] md:text-xs font-medium",
+              // Calm → Active/hover color
+              "text-white/70 hover:text-white",
+              active === t ? "text-white" : "",
+              // Underline indicator
+              "after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-white after:transition-transform",
+              active === t ? "after:scale-x-100" : "",
+              // Focus ring
+              "focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
             ].join(" ")}
           >
-            {t}
+            <span className="shrink-0">{TAG_ICON[t]}</span>
+            <span className="whitespace-nowrap">{t}</span>
           </button>
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <LazyMotion features={domAnimation}>
+        <m.div
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.06 } },
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-6 sm:gap-x-6 sm:gap-y-8 lg:gap-x-2 lg:gap-y-2"
+        >
         {filtered.length === 0 ? (
           <div className="col-span-full rounded-xl border p-8 text-center text-sm text-muted-foreground">
             <p>No projects match this tag.</p>
           </div>
         ) : (
           filtered.map((p) => (
-            <ProjectCard key={p.id} project={p} onOpenVideo={openVideo} />
+            <m.div key={p.id} variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0 } }}>
+              <ProjectCard project={p} onOpenVideo={openVideo} />
+            </m.div>
           ))
         )}
-      </div>
+        </m.div>
+      </LazyMotion>
 
       <VideoDialog
         open={videoOpen}

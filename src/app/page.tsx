@@ -2,23 +2,43 @@
 
 
 import { Projects } from "@/components/projects/Projects"
-import { Hero115 } from "@/components/hero115"
+import ContentSection from "@/components/content-3"
+import { Contact7 } from "@/components/contact7"
 
 // Inline components to keep everything in one file for now
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      <Hero115
-        icon={null}
+      {/* Hero content block (reel cover + copy) */}
+      <ContentSection
         heading="Video Editor"
         description="Cutting stories with rhythm and taste. Commercials, music videos, narrative – delivered fast with a director’s eye and an engineer’s rigor."
         button={{ text: "Watch Reel", url: "#reel" }}
-        trustText={undefined}
         imageSrc="/images/reel-cover.svg"
         imageAlt="Selected work"
       />
+
+      {/* Selected work grid */}
       <Projects />
+
+      {/* Contact */}
+      <section id="contact" className="mx-auto w-full max-w-6xl px-4 md:px-6 py-12 md:py-16">
+        <Contact7
+          title="Get in touch"
+          description="Connect with me for collaborations, questions, or opportunities."
+          emailLabel="LinkedIn"
+          emailDescription="Reach out on LinkedIn"
+          email="https://www.linkedin.com/in/sonyamoorjani/"
+          officeLabel="Email"
+          officeDescription="I'll respond as soon as I can"
+          officeAddress="hello@example.com"
+          phoneLabel="Instagram"
+          phoneDescription="Follow and DM"
+          phone="https://www.instagram.com/sonya.moorjani/"
+        />
+      </section>
+
       <SiteFooter />
     </main>
   )

@@ -1,6 +1,7 @@
 "use client"
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
+import { LazyMotion, domAnimation, m } from "framer-motion"
 import type { Project } from "./types"
 
 export function VideoDialog({
@@ -17,21 +18,29 @@ export function VideoDialog({
   const title = project?.title || "Project video"
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-screen-2xl w-[min(98vw,1600px)] border-0 bg-black p-0">
+      <DialogContent className="max-w-none sm:max-w-none w-[min(98vw,1600px)] max-h-[96svh] overflow-hidden rounded-xl border-0 bg-black p-0">
         {/* A11y: required title (visually hidden) */}
         <DialogTitle className="sr-only">{title}</DialogTitle>
         {/* Video */}
-        <div className="aspect-video w-full">
-          {youtubeId && (
-            <iframe
-              src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
-              title={title}
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full"
-            />
-          )}
-        </div>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+            className="aspect-video w-full bg-black"
+          >
+            {youtubeId && (
+              <iframe
+                className="h-full w-full border-0"
+                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&playsinline=1&modestbranding=1&color=white`}
+                title={title}
+                allow="autoplay; encrypted-media; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            )}
+          </m.div>
+        </LazyMotion>
         {/* Meta block */}
         {(project?.title || (project?.tags && project.tags.length > 0)) && (
           <div className="px-4 py-4 md:px-6 md:py-5">
