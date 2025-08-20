@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone, Linkedin, Instagram } from "lucide-react";
 
 interface Contact7Props {
   title?: string;
@@ -12,6 +12,9 @@ interface Contact7Props {
   phoneLabel?: string;
   phoneDescription?: string;
   phone?: string;
+  chatLabel?: string;
+  chatDescription?: string;
+  chatLink?: string;
 }
 
 const Contact7 = ({
@@ -26,6 +29,9 @@ const Contact7 = ({
   phoneLabel = "Instagram",
   phoneDescription = "Follow and DM.",
   phone = "https://www.instagram.com/sonya.moorjani/",
+  chatLabel = "Live Chat",
+  chatDescription = "Get instant help from our support team.",
+  chatLink = "Start Chat",
 }: Contact7Props) => {
   return (
     <section className="bg-background py-32">
@@ -43,7 +49,7 @@ const Contact7 = ({
             <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full border border-white/15 bg-white/5">
               <Linkedin className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-white/80">{emailLabel}</p>
+            <p className="mb-2 text-lg font-semibold">{emailLabel}</p>
             <p className="text-muted-foreground mb-3">{emailDescription}</p>
             <a
               href={email}
@@ -58,7 +64,7 @@ const Contact7 = ({
             <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full border border-white/15 bg-white/5">
               <Mail className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-white/80">{officeLabel}</p>
+            <p className="mb-2 text-lg font-semibold">{officeLabel}</p>
             <p className="text-muted-foreground mb-3">{officeDescription}</p>
             <a href={`mailto:${officeAddress}`} className="font-semibold hover:underline">
               {officeAddress}
@@ -68,7 +74,7 @@ const Contact7 = ({
             <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full border border-white/15 bg-white/5">
               <Instagram className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-white/80">{phoneLabel}</p>
+            <p className="mb-2 text-lg font-semibold">{phoneLabel}</p>
             <p className="text-muted-foreground mb-3">{phoneDescription}</p>
             <a href={phone} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">
               {phone}

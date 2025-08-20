@@ -29,13 +29,16 @@ export default function Home() {
           description="Connect with me for collaborations, questions, or opportunities."
           emailLabel="LinkedIn"
           emailDescription="Reach out on LinkedIn"
-          email="https://www.linkedin.com/in/sonyamoorjani/"
+          email="linkedin.com/in/sonyamoorjani"
           officeLabel="Email"
           officeDescription="I'll respond as soon as I can"
           officeAddress="hello@example.com"
           phoneLabel="Instagram"
           phoneDescription="Follow and DM"
-          phone="https://www.instagram.com/sonya.moorjani/"
+          phone="instagram.com/sonyamo"
+          chatLabel=""
+          chatDescription=""
+          chatLink=""
         />
       </section>
 
