@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Card } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { cn } from "@/lib/utils"
@@ -57,7 +57,7 @@ export function ProjectCard({
     <Link
       href={link}
       aria-label={`View project: ${project.title}`}
-      className="group block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
+      className="group block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
       onClick={(e) => {
         if (onOpenVideo && getProjectYouTubeId(project)) {
           e.preventDefault()
@@ -67,14 +67,14 @@ export function ProjectCard({
     >
       <Card
         className={cn(
-          "overflow-hidden rounded-2xl border border-white/20 bg-card/5 transition-colors gap-0 py-0",
+          "overflow-hidden rounded-lg border bg-card transition-colors gap-0 py-0",
           "focus-within:ring-2 focus-within:ring-ring/60 focus-visible:ring-offset-0",
           "motion-safe:hover:shadow-lg/5 motion-safe:hover:-translate-y-[2px]",
           "transition-transform"
         )}
       >
         <div className="relative">
-          <AspectRatio ratio={4 / 5}>
+          <AspectRatio ratio={5 / 5}>
             {/* Using next/image prevents layout shift */}
             <Image
               src={project.cover}
@@ -89,20 +89,14 @@ export function ProjectCard({
             />
           </AspectRatio>
 
-          {/* Bottom gradient overlay for legibility */}
+          {/* Overlay gradient for legibility */}
           <div
             className={cn(
-              "pointer-events-none absolute inset-x-0 bottom-0 h-28 sm:h-32",
-              "bg-gradient-to-t from-black/80 via-black/40 to-transparent",
-              "transition-colors group-hover:from-black/90 group-hover:via-black/50"
+              "pointer-events-none absolute inset-0",
+              "bg-gradient-to-t from-background/70 via-background/20 to-transparent",
+              "opacity-80 transition-opacity group-hover:opacity-90"
             )}
           />
-
-          {/* Bottom text block: title + meta over gradient */}
-          <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-            <h3 className="text-white text-base sm:text-lg font-semibold leading-snug truncate sm:line-clamp-2">{project.title}</h3>
-            <p className="text-white/80 text-xs sm:text-sm mt-1 truncate">{meta}</p>
-          </div>
 
           {/* Tag chips overlay */}
           <div className="absolute left-2 right-2 top-2 flex flex-wrap gap-1.5">
@@ -110,13 +104,13 @@ export function ProjectCard({
               <Badge
                 key={tag}
                 variant="outline"
-                className="rounded-sm border border-white/15 bg-black/40 text-[10px] leading-none text-white/90 backdrop-blur-sm"
+                className="rounded-sm border-foreground/10 bg-background/30 text-[10px] leading-none text-foreground/90 backdrop-blur-sm"
               >
                 {tag}
               </Badge>
             ))}
             {project.tags.length > 2 && (
-              <Badge variant="outline" className="rounded-full border border-white/15 bg-black/40 text-[10px] text-white/85">
+              <Badge variant="outline" className="rounded-full bg-background/20 text-[10px]">
                 +{project.tags.length - 2}
               </Badge>
             )}
@@ -124,13 +118,16 @@ export function ProjectCard({
 
           {/* Optional meta top-right (placeholder for a play icon or duration) */}
           {project.durationSec != null && (
-            <div className="absolute right-2 top-2 rounded-md bg-black/55 border border-white/15 px-2 py-1 text-xs text-white/90 [font-variant-numeric:tabular-nums] backdrop-blur-sm">
+            <div className="absolute right-2 top-2 rounded-md bg-background/40 px-1.5 py-0.5 text-[10px] text-foreground backdrop-blur-sm">
               <span className="sr-only">Duration</span>{formatDuration(project.durationSec)}
             </div>
           )}
         </div>
 
-
+        <CardContent className="p-4 min-h-20 flex flex-col gap-1">
+          <h3 className="line-clamp-1 text-lg font-semibold tracking-tight">{project.title}</h3>
+          <p className="line-clamp-1 text-xs sm:text-sm text-muted-foreground">{meta}</p>
+        </CardContent>
       </Card>
     </Link>
   )
