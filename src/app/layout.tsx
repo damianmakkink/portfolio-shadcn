@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MotionConfig } from "motion/react";
+import StoryblokProvider from "@/components/StoryblokProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,12 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <StoryblokProvider>
+      <html lang="en" className="dark scroll-smooth">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <MotionConfig
+            transition={{ duration: 0.2 }}
+          >
+            {children}
+          </MotionConfig>
+        </body>
+      </html>
+    </StoryblokProvider>
   );
 }

@@ -1,0 +1,800 @@
+{
+  "components": [
+    {
+      "name": "AboutSection",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T06:49:31.927Z",
+      "updated_at": "2025-08-29T06:51:52.068Z",
+      "id": 85035302618829,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "id": "MSARInIaSzK7N0cWfmbQLA",
+          "required": true
+        },
+        "description": {
+          "type": "richtext",
+          "pos": 1,
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "italic",
+            "underline"
+          ],
+          "id": "0gCtbRZwQXKk0wKvdsBccQ",
+          "required": true
+        },
+        "skills": {
+          "type": "bloks",
+          "pos": 2,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "AboutSectionSkillItem"
+          ],
+          "id": "DvKCAowaT2CK9StrefV4Og"
+        },
+        "usp_items": {
+          "type": "bloks",
+          "pos": 3,
+          "minimum": 4,
+          "maximum": 4,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "AboutSectionUspItem"
+          ],
+          "id": "6vNk_FLtQCiO76nalOwa7Q"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "AboutSection",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "AboutSectionSkillItem",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T06:50:27.961Z",
+      "updated_at": "2025-08-29T06:50:34.412Z",
+      "id": 85035532134094,
+      "schema": {
+        "label": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "WiVkAHENSna0GtHULIwR6A"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "AboutSectionSkillItem",
+      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Block components"
+    },
+    {
+      "name": "AboutSectionUspItem",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T06:51:11.359Z",
+      "updated_at": "2025-08-29T07:23:42.194Z",
+      "id": 85035709892303,
+      "schema": {
+        "icon": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "urBXM2DsRAWPi9_MoIVCfQ",
+          "description": "Find icon names here: https://lucide.dev/icons.\nUse PascalCasing, e.x. Clock or ArrowBigDown"
+        },
+        "title": {
+          "type": "text",
+          "pos": 1,
+          "id": "vJVmbJkmSuSYDySdH2lZIg",
+          "required": true
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 2,
+          "id": "VSMLOtMaROypBh6rqty8IQ",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "AboutSectionUspItem",
+      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Block components"
+    },
+    {
+      "name": "ContactSection",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T08:56:19.179Z",
+      "updated_at": "2025-08-29T08:57:35.514Z",
+      "id": 85066461927661,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "rGnbNYu0QFGin0p1iqNHgg"
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 1,
+          "required": true,
+          "id": "C4PTt85eRjW39XBpjzY-Zg"
+        },
+        "items": {
+          "type": "bloks",
+          "pos": 2,
+          "minimum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "id": "J-njsE7uTw6kp1DgAAHWJw",
+          "component_whitelist": [
+            "ContactSectionItem"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ContactSection",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "ContactSectionItem",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T08:56:57.939Z",
+      "updated_at": "2025-08-29T08:57:22.910Z",
+      "id": 85066620688622,
+      "schema": {
+        "icon": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "b9zhbjKNTZSFR8y7nZTmaw"
+        },
+        "title": {
+          "type": "text",
+          "pos": 1,
+          "id": "eppqDMKHSFK-Kud6kQ72Tg",
+          "required": true
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 2,
+          "id": "fkk5aXKdTze_0OcMl0XyfA",
+          "required": true
+        },
+        "url": {
+          "type": "text",
+          "pos": 3,
+          "id": "uoC4cLO3Rv2gJb3L42dLJQ",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ContactSectionItem",
+      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Block components"
+    },
+    {
+      "name": "HeroHeader",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T09:07:41.233Z",
+      "updated_at": "2025-08-29T09:18:02.219Z",
+      "id": 85069255616800,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "ejEclSAzTE6Lr0FxCTUHGg"
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 1,
+          "id": "6CQBQ-IRRymyYfOFNmKPJQ",
+          "required": true
+        },
+        "button_label": {
+          "type": "text",
+          "pos": 2,
+          "id": "yyELO2XaQaqrodxgawGK5A",
+          "required": true
+        },
+        "button_url": {
+          "type": "text",
+          "pos": 3,
+          "id": "nMSsb65_Qc2ZW8BOeiqoDw",
+          "required": true
+        },
+        "trusted_by": {
+          "type": "text",
+          "pos": 4,
+          "id": "OFcF88WoSfmnUy2bYFjtcA",
+          "required": true
+        },
+        "image": {
+          "type": "asset",
+          "pos": 5,
+          "id": "tq7iH3peTSSXWq4cvZkA_g",
+          "filetypes": [
+            "images"
+          ],
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "HeroHeader",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "HeroSection",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-09-01T11:35:19.757Z",
+      "updated_at": "2025-09-01T11:37:38.847Z",
+      "id": 86167223331606,
+      "schema": {
+        "video_cover": {
+          "type": "asset",
+          "pos": 0,
+          "filetypes": [
+            "images"
+          ],
+          "id": "cwuTg0HUSPWGUCf035eziQ"
+        },
+        "video_url": {
+          "type": "text",
+          "pos": 1,
+          "id": "5UeG9YfYRv2cfPQoV5wAlw"
+        },
+        "title": {
+          "type": "text",
+          "pos": 2,
+          "id": "Pld3784KRfGjXowU2Mp08A",
+          "required": true
+        },
+        "description": {
+          "type": "textarea",
+          "pos": 3,
+          "id": "Lhzn-QnSQgi1xRS_4MnhkQ",
+          "required": true
+        },
+        "expertises": {
+          "type": "bloks",
+          "pos": 4,
+          "maximum": 4,
+          "id": "P3YaIVmJSHGfD-bwYXsdbA",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "HeroSectionExpertiseItem"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "HeroSection",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "HeroSectionExpertiseItem",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-09-01T11:36:46.362Z",
+      "updated_at": "2025-09-01T11:36:57.303Z",
+      "id": 86167578065690,
+      "schema": {
+        "icon": {
+          "type": "text",
+          "pos": 0,
+          "id": "JZKJvCMfR9qhEi0zc5_N9Q",
+          "required": true
+        },
+        "label": {
+          "type": "text",
+          "pos": 1,
+          "required": true,
+          "id": "D98192lKR4yE8tmx9cPoaw"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "HeroSectionExpertiseItem",
+      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Block components"
+    },
+    {
+      "name": "LargeVideo",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-09-01T11:23:40.307Z",
+      "updated_at": "2025-09-01T11:28:19.827Z",
+      "id": 86164358384361,
+      "schema": {
+        "video": {
+          "type": "asset",
+          "pos": 0,
+          "required": false,
+          "filetypes": [
+            "videos"
+          ],
+          "id": "v7BmIJdTQUaFtqMTrgBngA"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "LargeVideo",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "description": null,
+      "created_at": "2025-08-28T08:28:35.754Z",
+      "updated_at": "2025-08-28T08:43:55.987Z",
+      "id": 84705754133921,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "id": "kykq5UMjQc-OEEWf2uiG1Q",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_whitelist": [],
+          "component_group_whitelist": [
+            "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "ProjectsGrid",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-28T08:39:48.459Z",
+      "updated_at": "2025-08-28T08:44:10.332Z",
+      "id": 84708509533685,
+      "schema": {
+        "projects": {
+          "type": "bloks",
+          "pos": 0,
+          "id": "w78VC0bbRuChnbhHxitriQ",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "ProjectsGridItem"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ProjectsGrid",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "ProjectsGridItem",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-28T08:40:10.942Z",
+      "updated_at": "2025-08-29T12:16:44.909Z",
+      "id": 84708601624054,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "id": "VWJLatmTR-S_S0OwJDwbbA"
+        },
+        "cover": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ],
+          "id": "wJmyV25gQdqL6jaq8fZuSw",
+          "required": false
+        },
+        "year": {
+          "type": "text",
+          "pos": 2,
+          "id": "A-G78uqBR3qfNstXlFPM6A"
+        },
+        "duration_in_seconds": {
+          "type": "number",
+          "pos": 3,
+          "id": "wLR8YkUHT66T3XsitMwhGw"
+        },
+        "tags": {
+          "type": "options",
+          "pos": 4,
+          "id": "yy-qZakqT2Kf0yClIYAL0A",
+          "options": [
+            {
+              "_uid": "a16f565b-17f7-4701-a7bc-fe1c9ffe138f",
+              "name": "R&D",
+              "value": "R&D"
+            },
+            {
+              "_uid": "4248c4fe-3f41-41cc-84af-b736c05b35b2",
+              "value": "Narrative",
+              "name": "Narrative"
+            },
+            {
+              "_uid": "ae26c468-e7bf-467f-a88e-f3ef5c8ce9fb",
+              "value": "AI",
+              "name": "AI"
+            },
+            {
+              "_uid": "206c6edb-d0de-43fb-baff-4dc42bc626b9",
+              "value": "Edit",
+              "name": "Edit"
+            },
+            {
+              "_uid": "e4297d7e-5e36-46a0-8c7e-329c26478dc3",
+              "value": "Color",
+              "name": "Color"
+            },
+            {
+              "_uid": "84fad3b8-cc64-43c6-aaa0-e36bbcc6a42c",
+              "value": "Docu",
+              "name": "Docu"
+            },
+            {
+              "_uid": "5819da26-277d-40cf-b493-6f5a23999045",
+              "value": "VFX",
+              "name": "VFX"
+            },
+            {
+              "_uid": "b44989b2-bd38-432e-be1d-cef3bc2fa91c",
+              "value": "Promo",
+              "name": "Promo"
+            },
+            {
+              "_uid": "db1e1ebf-5eb9-4a17-a2ac-47ab689b4bbf",
+              "value": "Production",
+              "name": "Production"
+            }
+          ]
+        },
+        "client": {
+          "type": "text",
+          "pos": 5,
+          "id": "vj5gOzbcQj-slluaAnqcxg",
+          "required": false
+        },
+        "role": {
+          "type": "options",
+          "pos": 6,
+          "id": "_ZveW7zMQJmTge3yer0L4g",
+          "options": [
+            {
+              "_uid": "46c49a70-8075-45df-9eb7-a95df0472657",
+              "value": "Creative Director",
+              "name": "Creative Director"
+            },
+            {
+              "_uid": "5aeb5137-cf10-4937-b0fc-e00da63ebe42",
+              "name": "Director",
+              "value": "Director"
+            },
+            {
+              "_uid": "d882874d-6790-4427-b41d-845463c9488c",
+              "value": "Writer",
+              "name": "Writer"
+            },
+            {
+              "_uid": "c71ad571-6627-43ce-948f-ec7e77b03a81",
+              "value": "Editor",
+              "name": "Editor"
+            },
+            {
+              "_uid": "691f7863-bbf6-4d84-961f-4c0f43b69076",
+              "value": "Head of Post",
+              "name": "Head of Post"
+            },
+            {
+              "_uid": "886608ee-a330-4121-8ab5-90db003b76bb",
+              "value": "AI Artist",
+              "name": "AI Artist"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "datetime",
+          "pos": 7,
+          "id": "mSiuVu21RTCU5FgZ9Ti-cw",
+          "disable_time": true
+        },
+        "video_url": {
+          "type": "text",
+          "pos": 8,
+          "id": "0tRGxPdVRke_abs9CoidMw"
+        },
+        "video_id": {
+          "type": "text",
+          "pos": 9,
+          "required": true,
+          "id": "owpXhl_ZQRCVd7rHrAZ3RA",
+          "description": "You can find the video ID in the URL.\nFor example, \"guyubh5aufQ\" is the ID in https://youtube.com/shorts/guyubh5aufQ"
+        },
+        "studio": {
+          "type": "text",
+          "pos": 10,
+          "id": "2iQX1WUvRYm4htPgIg-u-A"
+        },
+        "platform": {
+          "type": "text",
+          "pos": 11,
+          "id": "C8t9CZ1kQ3qENnJTw7ncBw"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ProjectsGridItem",
+      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Block components"
+    },
+    {
+      "name": "ServicesGrid",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T08:42:36.176Z",
+      "updated_at": "2025-08-29T08:43:43.968Z",
+      "id": 85063090903233,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "O14UmeZjTjGyvIi9QVxT_w"
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 1,
+          "id": "blBPR5SuRTOKrJGHQ_0glw",
+          "required": true
+        },
+        "services": {
+          "type": "bloks",
+          "pos": 2,
+          "id": "XHh7pcCzTpauiAzvNMBl1A",
+          "minimum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "ServicesGridItem"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ServicesGrid",
+      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Blocks"
+    },
+    {
+      "name": "ServicesGridItem",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-08-29T08:43:13.287Z",
+      "updated_at": "2025-08-29T08:46:08.302Z",
+      "id": 85063242909892,
+      "schema": {
+        "icon": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "LaDUkrnuQvqP9v38qvQDpA",
+          "description": "Find icon names here: https://lucide.dev/icons.\nUse PascalCasing, e.x. Clock or ArrowBigDown"
+        },
+        "title": {
+          "type": "text",
+          "pos": 1,
+          "id": "5wJGyEnRSxWTgWTnBVcrug",
+          "required": true
+        },
+        "description": {
+          "type": "textarea",
+          "pos": 2,
+          "id": "ybHgqrRRQRuma4z8Gc4jEQ",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ServicesGridItem",
+      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Block components"
+    }
+  ],
+  "component_groups": [
+    {
+      "name": "Block components",
+      "id": 84708459792164,
+      "uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "parent_id": null,
+      "parent_uuid": null
+    },
+    {
+      "name": "Blocks",
+      "id": 84708438837027,
+      "uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "parent_id": null,
+      "parent_uuid": null
+    }
+  ]
+}

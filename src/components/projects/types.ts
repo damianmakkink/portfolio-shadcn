@@ -4,7 +4,7 @@ export type Project = {
   slug?: string
   cover: string // URL or /public path
   year?: number
-  durationSec?: number
+  durationSec?: string
   tags: string[]
   client?: string
   role?: string[]
