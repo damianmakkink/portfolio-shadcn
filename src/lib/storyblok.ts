@@ -1,11 +1,8 @@
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc'
 import Page from '@/components/storyblok/Page'
-import ProjectsGrid from '@/components/storyblok/ProjectsGrid'
-import AboutSection from '@/components/storyblok/AboutSection'
-import ServicesGrid from '@/components/storyblok/ServicesGrid'
-import ContactSection from '@/components/storyblok/ContactSection'
-import HeroHeader from '@/components/storyblok/HeroHeader'
 import HeroSection from '@/components/storyblok/HeroSection'
+import ProjectsGrid from '@/components/storyblok/ProjectsGrid'
+import ContactSection from '@/components/storyblok/ContactSection'
 
 export const getStoryblokApi = storyblokInit({
     accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
@@ -15,11 +12,8 @@ export const getStoryblokApi = storyblokInit({
     },
     components: {
       page: Page,
+      HeroSection,
       ProjectsGrid,
-      AboutSection,
-      ServicesGrid,
-      ContactSection,
-      HeroHeader,
-      HeroSection
+      ContactSection
     }
 })

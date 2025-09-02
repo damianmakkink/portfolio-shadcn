@@ -66,7 +66,7 @@ export default function ProjectsGrid({blok}: {blok: ProjectsGridStoryblok}) {
           initial={{ opacity: 0, transform: 'translateY(-20px)' }}
           whileInView={{ opacity: 1, transform: 'translateY(0)' }}
           viewport={{ once: true }}
-          className="text-3xl font-bold mb-8 text-center"
+          className="text-3xl font-mono font-bold mb-8 text-center"
         >
           Projects
         </motion.h2>

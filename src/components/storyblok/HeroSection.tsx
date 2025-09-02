@@ -1,13 +1,17 @@
 "use client"
 
-import { storyblokEditable } from '@storyblok/react/rsc'
 import Image from 'next/image'
+import { useState } from 'react'
 import { motion, stagger } from 'motion/react'
+import { storyblokEditable } from '@storyblok/react/rsc'
+import Vimeo from '@u-wave/react-vimeo'
 import { Card } from '@/components/ui/card'
 import Icon from '@/components/icon/Icon'
 import type { HeroSectionStoryblok } from '@/types/component-types-sb'
 
 export default function HeroSection({blok}: {blok: HeroSectionStoryblok}) {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+
   const parentVariant = {
     show: {
       transition: {
@@ -26,14 +30,29 @@ export default function HeroSection({blok}: {blok: HeroSectionStoryblok}) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }}
+        className="mx-auto max-w-1920px overflow-hidden aspect-video relative"
       >
-        <Image
-          src={blok.video_cover.filename || 'images/reel-cover.svg'}
-          alt={blok.video_cover.alt || blok.title}
-          width={1920}
-          height={1080}
-          className="mx-auto h-full w-full max-w-[1920px] rounded-2xl aspect-video object-cover"
+        {blok.video_cover && blok.video_cover.filename && !isVideoPlaying &&
+          <Image
+            src={blok.video_cover.filename || 'images/reel-cover.svg'}
+            alt={blok.video_cover.alt || blok.title}
+            width={1920}
+            height={1080}
+            priority={true}
+            className="mx-auto h-full w-full max-w-[1920px] aspect-video object-cover absolute inset-0"
+          />
+        }
+        <Vimeo
+          video="1115039524"
+          autoplay
+          muted
+          background
+          responsive
+          loop
+          className="h-full w-full"
+          onPlaying={() => setIsVideoPlaying(true)}
         />
       </motion.div>
       <div className="max-w-7xl mx-auto">
@@ -46,7 +65,7 @@ export default function HeroSection({blok}: {blok: HeroSectionStoryblok}) {
             initial={{ opacity: 0, transform: 'translateY(-20px)' }}
             whileInView={{ opacity: 1, transform: 'translateY(0)' }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold mb-4"
+            className="text-4xl lg:text-5xl font-mono font-bold mb-4"
           >
             {blok.title}
           </motion.h1>
@@ -73,7 +92,7 @@ export default function HeroSection({blok}: {blok: HeroSectionStoryblok}) {
               key={expertise._uid}
               variants={childVariant}
             >
-              <Card className="h-full p-6 text-center hover:bg-card/80 transition-all duration-300 will-change-transform hover:scale-[1.02] group rounded-none">
+              <Card className="h-full p-6 text-center bg-gradient-to-br from-primary/10 to-transparent hover:bg-primary/10 transition-all duration-300 will-change-transform hover:scale-[1.02] group rounded-none">
                 <Icon
                   name={expertise.icon}
                   className="w-8 h-8 mb-3 mx-auto text-primary group-hover:text-accent transition-colors duration-200"

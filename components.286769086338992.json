@@ -1,149 +1,6 @@
 {
   "components": [
     {
-      "name": "AboutSection",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-08-29T06:49:31.927Z",
-      "updated_at": "2025-08-29T06:51:52.068Z",
-      "id": 85035302618829,
-      "schema": {
-        "title": {
-          "type": "text",
-          "pos": 0,
-          "id": "MSARInIaSzK7N0cWfmbQLA",
-          "required": true
-        },
-        "description": {
-          "type": "richtext",
-          "pos": 1,
-          "customize_toolbar": true,
-          "toolbar": [
-            "bold",
-            "italic",
-            "underline"
-          ],
-          "id": "0gCtbRZwQXKk0wKvdsBccQ",
-          "required": true
-        },
-        "skills": {
-          "type": "bloks",
-          "pos": 2,
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "AboutSectionSkillItem"
-          ],
-          "id": "DvKCAowaT2CK9StrefV4Og"
-        },
-        "usp_items": {
-          "type": "bloks",
-          "pos": 3,
-          "minimum": 4,
-          "maximum": 4,
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "AboutSectionUspItem"
-          ],
-          "id": "6vNk_FLtQCiO76nalOwa7Q"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "AboutSection",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Blocks"
-    },
-    {
-      "name": "AboutSectionSkillItem",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-08-29T06:50:27.961Z",
-      "updated_at": "2025-08-29T06:50:34.412Z",
-      "id": 85035532134094,
-      "schema": {
-        "label": {
-          "type": "text",
-          "pos": 0,
-          "required": true,
-          "id": "WiVkAHENSna0GtHULIwR6A"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "AboutSectionSkillItem",
-      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Block components"
-    },
-    {
-      "name": "AboutSectionUspItem",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-08-29T06:51:11.359Z",
-      "updated_at": "2025-08-29T07:23:42.194Z",
-      "id": 85035709892303,
-      "schema": {
-        "icon": {
-          "type": "text",
-          "pos": 0,
-          "required": true,
-          "id": "urBXM2DsRAWPi9_MoIVCfQ",
-          "description": "Find icon names here: https://lucide.dev/icons.\nUse PascalCasing, e.x. Clock or ArrowBigDown"
-        },
-        "title": {
-          "type": "text",
-          "pos": 1,
-          "id": "vJVmbJkmSuSYDySdH2lZIg",
-          "required": true
-        },
-        "subtitle": {
-          "type": "text",
-          "pos": 2,
-          "id": "VSMLOtMaROypBh6rqty8IQ",
-          "required": true
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "AboutSectionUspItem",
-      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Block components"
-    },
-    {
       "name": "ContactSection",
       "display_name": null,
       "description": "",
@@ -243,76 +100,11 @@
       "component_group_name": "Block components"
     },
     {
-      "name": "HeroHeader",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-08-29T09:07:41.233Z",
-      "updated_at": "2025-08-29T09:18:02.219Z",
-      "id": 85069255616800,
-      "schema": {
-        "title": {
-          "type": "text",
-          "pos": 0,
-          "required": true,
-          "id": "ejEclSAzTE6Lr0FxCTUHGg"
-        },
-        "subtitle": {
-          "type": "text",
-          "pos": 1,
-          "id": "6CQBQ-IRRymyYfOFNmKPJQ",
-          "required": true
-        },
-        "button_label": {
-          "type": "text",
-          "pos": 2,
-          "id": "yyELO2XaQaqrodxgawGK5A",
-          "required": true
-        },
-        "button_url": {
-          "type": "text",
-          "pos": 3,
-          "id": "nMSsb65_Qc2ZW8BOeiqoDw",
-          "required": true
-        },
-        "trusted_by": {
-          "type": "text",
-          "pos": 4,
-          "id": "OFcF88WoSfmnUy2bYFjtcA",
-          "required": true
-        },
-        "image": {
-          "type": "asset",
-          "pos": 5,
-          "id": "tq7iH3peTSSXWq4cvZkA_g",
-          "filetypes": [
-            "images"
-          ],
-          "required": false
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "HeroHeader",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Blocks"
-    },
-    {
       "name": "HeroSection",
       "display_name": null,
       "description": "",
       "created_at": "2025-09-01T11:35:19.757Z",
-      "updated_at": "2025-09-01T11:37:38.847Z",
+      "updated_at": "2025-09-02T08:52:34.083Z",
       "id": 86167223331606,
       "schema": {
         "video_cover": {
@@ -321,28 +113,30 @@
           "filetypes": [
             "images"
           ],
-          "id": "cwuTg0HUSPWGUCf035eziQ"
+          "id": "cwuTg0HUSPWGUCf035eziQ",
+          "description": "Ideally this should be the first frame of the video."
         },
-        "video_url": {
+        "video_vimeo_id": {
           "type": "text",
-          "pos": 1,
-          "id": "5UeG9YfYRv2cfPQoV5wAlw"
+          "pos": 2,
+          "id": "EXFPC_lbQhiLBEfGyjdhhQ",
+          "description": "The ID of the Vimeo video.\nE.x. 1115039524 is the ID in https://vimeo.com/1115039524"
         },
         "title": {
           "type": "text",
-          "pos": 2,
+          "pos": 3,
           "id": "Pld3784KRfGjXowU2Mp08A",
           "required": true
         },
         "description": {
           "type": "textarea",
-          "pos": 3,
+          "pos": 4,
           "id": "Lhzn-QnSQgi1xRS_4MnhkQ",
           "required": true
         },
         "expertises": {
           "type": "bloks",
-          "pos": 4,
+          "pos": 5,
           "maximum": 4,
           "id": "P3YaIVmJSHGfD-bwYXsdbA",
           "restrict_type": "",
@@ -374,14 +168,15 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-09-01T11:36:46.362Z",
-      "updated_at": "2025-09-01T11:36:57.303Z",
+      "updated_at": "2025-09-01T12:08:27.657Z",
       "id": 86167578065690,
       "schema": {
         "icon": {
           "type": "text",
           "pos": 0,
           "id": "JZKJvCMfR9qhEi0zc5_N9Q",
-          "required": true
+          "required": true,
+          "description": "Find icon names here: https://lucide.dev/icons.\nUse PascalCasing, e.x. Clock or ArrowBigDown"
         },
         "label": {
           "type": "text",
@@ -406,41 +201,6 @@
       "content_type_asset_preview": null,
       "metadata": {},
       "component_group_name": "Block components"
-    },
-    {
-      "name": "LargeVideo",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-09-01T11:23:40.307Z",
-      "updated_at": "2025-09-01T11:28:19.827Z",
-      "id": 86164358384361,
-      "schema": {
-        "video": {
-          "type": "asset",
-          "pos": 0,
-          "required": false,
-          "filetypes": [
-            "videos"
-          ],
-          "id": "v7BmIJdTQUaFtqMTrgBngA"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "LargeVideo",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Blocks"
     },
     {
       "name": "page",
@@ -677,100 +437,6 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "ProjectsGridItem",
-      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Block components"
-    },
-    {
-      "name": "ServicesGrid",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-08-29T08:42:36.176Z",
-      "updated_at": "2025-08-29T08:43:43.968Z",
-      "id": 85063090903233,
-      "schema": {
-        "title": {
-          "type": "text",
-          "pos": 0,
-          "required": true,
-          "id": "O14UmeZjTjGyvIi9QVxT_w"
-        },
-        "subtitle": {
-          "type": "text",
-          "pos": 1,
-          "id": "blBPR5SuRTOKrJGHQ_0glw",
-          "required": true
-        },
-        "services": {
-          "type": "bloks",
-          "pos": 2,
-          "id": "XHh7pcCzTpauiAzvNMBl1A",
-          "minimum": 1,
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "ServicesGridItem"
-          ]
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "ServicesGrid",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
-      "color": null,
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null,
-      "metadata": {},
-      "component_group_name": "Blocks"
-    },
-    {
-      "name": "ServicesGridItem",
-      "display_name": null,
-      "description": "",
-      "created_at": "2025-08-29T08:43:13.287Z",
-      "updated_at": "2025-08-29T08:46:08.302Z",
-      "id": 85063242909892,
-      "schema": {
-        "icon": {
-          "type": "text",
-          "pos": 0,
-          "required": true,
-          "id": "LaDUkrnuQvqP9v38qvQDpA",
-          "description": "Find icon names here: https://lucide.dev/icons.\nUse PascalCasing, e.x. Clock or ArrowBigDown"
-        },
-        "title": {
-          "type": "text",
-          "pos": 1,
-          "id": "5wJGyEnRSxWTgWTnBVcrug",
-          "required": true
-        },
-        "description": {
-          "type": "textarea",
-          "pos": 2,
-          "id": "ybHgqrRRQRuma4z8Gc4jEQ",
-          "required": true
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "ServicesGridItem",
       "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
       "color": null,
       "icon": null,

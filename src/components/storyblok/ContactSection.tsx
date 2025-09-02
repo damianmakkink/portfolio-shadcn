@@ -31,7 +31,7 @@ export default function ContactSection({blok}: {blok: ContactSectionStoryblok}) 
           initial={{ opacity: 0, transform: 'translateY(-20px)' }}
           whileInView={{ opacity: 1, transform: 'translateY(0)' }}
           viewport={{ once: true }}
-          className="text-3xl font-bold mb-4"
+          className="text-3xl font-mono font-bold mb-4"
         >
           {blok.title}
         </motion.h2>
@@ -59,10 +59,10 @@ export default function ContactSection({blok}: {blok: ContactSectionStoryblok}) 
               target="_blank"
               variants={childVariant}
             >
-              <Card className="p-6 hover:bg-primary/10 transition-colors">
+              <Card className="p-6 bg-gradient-to-br from-primary/10 to-transparent hover:bg-primary/10 transition-colors group">
                 <Icon
                   name={item.icon}
-                  className="w-8 h-8 mb-4 mx-auto text-primary"
+                  className="w-8 h-8 mb-4 mx-auto text-primary transition-colors group-hover:text-accent"
                 />
                 <h3 className="font-semibold mb-2">
                   {item.title}

@@ -39,9 +39,9 @@
   --sidebar-accent-foreground: oklch(0 0 0);
   --sidebar-border: oklch(0 0 0);
   --sidebar-ring: oklch(0.7853 0.1041 274.7134);
-  --font-sans: DM Sans, sans-serif;
+  --font-sans: var(--font-inclusive-sans), sans-serif;
+  --font-mono: var(--font-fira-code), monospace;
   --font-serif: DM Sans, sans-serif;
-  --font-mono: Space Mono, monospace;
   --shadow-color: #1a1a1a;
   --shadow-opacity: 0.05;
   --shadow-blur: 0px;
@@ -96,9 +96,9 @@
   --sidebar-border: oklch(1.0000 0 0);
   --sidebar-ring: oklch(0.6801 0.1583 276.9349);
   --radius: 0rem;
-  --font-sans: DM Sans, sans-serif;
+  --font-sans: var(--font-inclusive-sans), sans-serif;
+  --font-mono: var(--font-fira-code), monospace;
   --font-serif: DM Sans, sans-serif;
-  --font-mono: Space Mono, monospace;
   --shadow-color: #1a1a1a;
   --shadow-opacity: 0.05;
   --shadow-blur: 0px;
@@ -118,8 +118,8 @@
 }
 
 @theme inline {
-  --font-sans: DM Sans, sans-serif;
-  --font-mono: Space Mono, monospace;
+  --font-sans: var(--font-inclusive-sans), sans-serif;
+  --font-mono: var(--font-fira-code), monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
