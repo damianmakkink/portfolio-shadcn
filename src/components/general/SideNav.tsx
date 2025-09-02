@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Home, User, FolderOpen, Mail } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 const navItems = [
   { icon: Home, label: 'Home', href: '#' },
@@ -17,31 +16,22 @@ export default function SideNav() {
         className="flex items-center gap-2 mb-12"
       >
         <div className="h-4 w-4 rounded-sm bg-foreground" />
-        <span className="text-sm font-medium tracking-wider uppercase">
+        <span className="text-sm font-bold tracking-wider uppercase">
           Sonya Moorjani
         </span>
       </Link>
 
       <div className="space-y-2">
         {navItems.map((item) => (
-          <Button
+          <a
             key={item.label}
-            variant="ghost"
-            className="w-full justify-start gap-3 h-12 text-left hover:bg-accent/50"
-            asChild
+            href={item.href}
+            className="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium transition-all [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive py-2 px-3 w-full justify-start gap-3 h-12 hover:text-primary"
           >
-            <a href={item.href}>
-              <item.icon className="w-5 h-5" />
-              {item.label}
-            </a>
-          </Button>
+            <item.icon className="w-5 h-5" />
+            {item.label}
+          </a>
         ))}
-      </div>
-
-      <div className="absolute bottom-6 left-6 right-6">
-        <Button className="w-full">
-          Get in touch
-        </Button>
       </div>
     </nav>
   )

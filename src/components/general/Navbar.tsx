@@ -62,7 +62,7 @@ export default function Navbar() {
           <a href="#contact">
             <Button
               size="sm"
-              variant="secondary"
+              variant="default"
               className="cursor-pointer"
             >
               Get in touch

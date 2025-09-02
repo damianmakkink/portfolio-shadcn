@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Card
       className={cn(
-        "overflow-hidden rounded-2xl border bg-card transition-colors gap-0 py-0 group",
+        "overflow-hidden border bg-card transition-colors gap-0 py-0 group",
         "focus-within:ring-1 focus-within:ring-ring/50"
       )}
     >
@@ -63,7 +63,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
         {/* Optional meta top-right (placeholder for a play icon or duration) */}
         {project.durationSec != null && (
-          <div className="absolute right-2 top-2 rounded-md bg-background/40 px-1.5 py-0.5 text-[10px] text-foreground backdrop-blur-sm">
+          <div className="absolute right-2 top-2 bg-background/40 px-1.5 py-0.5 text-[10px] text-foreground backdrop-blur-sm">
             <span className="sr-only">Duration</span>{formatDuration(project.durationSec)}
           </div>
         )}

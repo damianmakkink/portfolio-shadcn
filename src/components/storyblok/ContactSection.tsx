@@ -23,7 +23,7 @@ export default function ContactSection({blok}: {blok: ContactSectionStoryblok}) 
   return (
     <section
       id="contact"
-      className="py-24"
+      className="py-12 md:py-24"
       {...storyblokEditable(blok)}
     >
       <div className="max-w-4xl mx-auto text-center">
@@ -59,7 +59,7 @@ export default function ContactSection({blok}: {blok: ContactSectionStoryblok}) 
               target="_blank"
               variants={childVariant}
             >
-              <Card className="p-6 hover:bg-card/80 transition-colors">
+              <Card className="p-6 hover:bg-primary/10 transition-colors">
                 <Icon
                   name={item.icon}
                   className="w-8 h-8 mb-4 mx-auto text-primary"

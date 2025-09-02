@@ -58,7 +58,7 @@ export default function ProjectsGrid({blok}: {blok: ProjectsGridStoryblok}) {
   return (
     <section
       id="projects"
-      className="py-24 bg-card/50"
+      className="py-12 md:py-24 bg-card/50"
       {...storyblokEditable(blok)}
     >
       <div className="max-w-7xl mx-auto">
@@ -84,10 +84,10 @@ export default function ProjectsGrid({blok}: {blok: ProjectsGridStoryblok}) {
               variants={tagChildVariant}
             >
               <button
-                className={`flex items-center gap-2 cursor-pointer px-4 py-2 uppercase text-xs tracking-widest border-b-2 transition-colors hover:text-white ${
+                className={`flex items-center gap-2 cursor-pointer px-4 py-2 text-muted-foreground uppercase text-xs tracking-[0.2em] border-b-2 transition-colors hover:text-white ${
                   activeCategory === category.name
-                    ? "border-white text-white"
-                    : "border-transparent text-muted-foreground"
+                    ? "border-white"
+                    : "border-transparent"
                 }`}
                 onClick={() => setActiveCategory(category.name)}
               >
@@ -104,7 +104,7 @@ export default function ProjectsGrid({blok}: {blok: ProjectsGridStoryblok}) {
           </p>
         }
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {filteredProjects && filteredProjects.map((project, index) => (
             <motion.div
               key={project._uid}
