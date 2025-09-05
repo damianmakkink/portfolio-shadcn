@@ -14,11 +14,12 @@ const eslintConfig = [
   {
     rules: {
       // Add your custom rules here
-      "@typescript-eslint/ban-ts-comment": "off",
-    },
-    exclude: [
-      "node_modules",
-      "src/types/*.d.ts"
+      "@typescript-eslint/ban-ts-comment": "off"
+    }
+  },
+  {
+    ignores: [
+      "src/types/component-types-sb.d.ts"
     ]
   }
 ];
