@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { motion } from 'motion/react'
-import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -13,12 +12,12 @@ import {
 export default function Navbar() {
   const items = [
     {
-      href: "#about",
-      label: "About"
+      href: "#",
+      label: "Home"
     },
     {
-      href: "#services",
-      label: "Services"
+      href: "#about",
+      label: "About"
     },
     {
       href: "#projects",
@@ -59,15 +58,6 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <a href="#contact">
-            <Button
-              size="sm"
-              variant="default"
-              className="cursor-pointer"
-            >
-              Get in touch
-            </Button>
-          </a>
           <DropdownMenu>
             <DropdownMenuTrigger className="md:hidden">
                 <span className="sr-only">Menu</span>
