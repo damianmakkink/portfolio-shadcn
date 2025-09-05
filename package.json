@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "storyblok-refresh": "npm run storyblok-pull && npm run generate-storyblok-types",
-    "storyblok-pull": "storyblok pull-components --space 286769086338992",
-    "generate-storyblok-types": "storyblok generate-typescript-typedefs --sourceFilePaths ./components.286769086338992.json --destinationFilePath ./src/types/component-types-sb.d.ts"
+    "storyblok-pull": "storyblok pull-components --space 286932159289814",
+    "generate-storyblok-types": "storyblok generate-typescript-typedefs --sourceFilePaths ./components.286932159289814.json --destinationFilePath ./src/types/component-types-sb.d.ts"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.7",

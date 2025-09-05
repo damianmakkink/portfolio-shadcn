@@ -4,9 +4,9 @@
       "name": "ContactSection",
       "display_name": null,
       "description": "",
-      "created_at": "2025-08-29T08:56:19.179Z",
-      "updated_at": "2025-08-29T08:57:35.514Z",
-      "id": 85066461927661,
+      "created_at": "2025-09-04T17:26:00.376Z",
+      "updated_at": "2025-09-04T17:26:00.376Z",
+      "id": 87315088905323,
       "schema": {
         "title": {
           "type": "text",
@@ -40,7 +40,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "ContactSection",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "component_group_uuid": "07d68bf9-82e4-44f6-bc29-75e8467fa056",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
@@ -53,9 +53,9 @@
       "name": "ContactSectionItem",
       "display_name": null,
       "description": "",
-      "created_at": "2025-08-29T08:56:57.939Z",
-      "updated_at": "2025-08-29T08:57:22.910Z",
-      "id": 85066620688622,
+      "created_at": "2025-09-04T17:26:01.426Z",
+      "updated_at": "2025-09-04T17:26:01.426Z",
+      "id": 87315093206124,
       "schema": {
         "icon": {
           "type": "text",
@@ -90,7 +90,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "ContactSectionItem",
-      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "component_group_uuid": "b9934172-bc01-4227-b057-fc32c3c3c685",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
@@ -103,9 +103,9 @@
       "name": "HeroSection",
       "display_name": null,
       "description": "",
-      "created_at": "2025-09-01T11:35:19.757Z",
-      "updated_at": "2025-09-02T08:52:34.083Z",
-      "id": 86167223331606,
+      "created_at": "2025-09-04T17:26:03.563Z",
+      "updated_at": "2025-09-04T17:26:03.563Z",
+      "id": 87315101959277,
       "schema": {
         "video_cover": {
           "type": "asset",
@@ -154,7 +154,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "HeroSection",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "component_group_uuid": "07d68bf9-82e4-44f6-bc29-75e8467fa056",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
@@ -167,9 +167,9 @@
       "name": "HeroSectionExpertiseItem",
       "display_name": null,
       "description": "",
-      "created_at": "2025-09-01T11:36:46.362Z",
-      "updated_at": "2025-09-01T12:08:27.657Z",
-      "id": 86167578065690,
+      "created_at": "2025-09-04T17:26:05.089Z",
+      "updated_at": "2025-09-04T17:26:05.089Z",
+      "id": 87315108209774,
       "schema": {
         "icon": {
           "type": "text",
@@ -193,7 +193,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "HeroSectionExpertiseItem",
-      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "component_group_uuid": "b9934172-bc01-4227-b057-fc32c3c3c685",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
@@ -206,18 +206,19 @@
       "name": "page",
       "display_name": null,
       "description": null,
-      "created_at": "2025-08-28T08:28:35.754Z",
-      "updated_at": "2025-08-28T08:43:55.987Z",
-      "id": 84705754133921,
+      "created_at": "2025-09-04T17:25:19.466Z",
+      "updated_at": "2025-09-05T07:48:17.287Z",
+      "id": 87314921342055,
       "schema": {
         "body": {
           "type": "bloks",
-          "id": "kykq5UMjQc-OEEWf2uiG1Q",
+          "id": "-gpy_bscQ-S7uz6sFUKKUA",
           "restrict_type": "groups",
           "restrict_components": true,
           "component_whitelist": [],
           "component_group_whitelist": [
-            "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3"
+            "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+            "07d68bf9-82e4-44f6-bc29-75e8467fa056"
           ]
         }
       },
@@ -241,9 +242,9 @@
       "name": "ProjectsGrid",
       "display_name": null,
       "description": "",
-      "created_at": "2025-08-28T08:39:48.459Z",
-      "updated_at": "2025-08-28T08:44:10.332Z",
-      "id": 84708509533685,
+      "created_at": "2025-09-04T17:26:08.311Z",
+      "updated_at": "2025-09-04T17:26:08.311Z",
+      "id": 87315121407087,
       "schema": {
         "projects": {
           "type": "bloks",
@@ -264,7 +265,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "ProjectsGrid",
-      "component_group_uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "component_group_uuid": "07d68bf9-82e4-44f6-bc29-75e8467fa056",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
@@ -277,9 +278,9 @@
       "name": "ProjectsGridItem",
       "display_name": null,
       "description": "",
-      "created_at": "2025-08-28T08:40:10.942Z",
-      "updated_at": "2025-08-29T12:16:44.909Z",
-      "id": 84708601624054,
+      "created_at": "2025-09-04T17:26:09.714Z",
+      "updated_at": "2025-09-04T17:26:09.714Z",
+      "id": 87315127153776,
       "schema": {
         "title": {
           "type": "text",
@@ -437,7 +438,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "ProjectsGridItem",
-      "component_group_uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "component_group_uuid": "b9934172-bc01-4227-b057-fc32c3c3c685",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
@@ -450,15 +451,15 @@
   "component_groups": [
     {
       "name": "Block components",
-      "id": 84708459792164,
-      "uuid": "2c91517f-b27f-4780-963a-73e0d9156c5d",
+      "id": 87315080516425,
+      "uuid": "b9934172-bc01-4227-b057-fc32c3c3c685",
       "parent_id": null,
       "parent_uuid": null
     },
     {
       "name": "Blocks",
-      "id": 84708438837027,
-      "uuid": "b6b2d7ea-864b-4ded-bca0-9014a3f0c2f3",
+      "id": 87315084571466,
+      "uuid": "07d68bf9-82e4-44f6-bc29-75e8467fa056",
       "parent_id": null,
       "parent_uuid": null
     }
