@@ -122,7 +122,6 @@ export default function ProjectsGrid({blok}: {blok: ProjectsGridStoryblok}) {
                     <ProjectCard
                       project={{
                         ...project,
-                        cover: project.cover.filename,
                         durationSec: project.duration_in_seconds
                       }}
                     />

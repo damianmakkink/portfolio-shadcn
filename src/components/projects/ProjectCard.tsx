@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { cn } from "@/lib/utils"
-import type { Project } from "./types"
+import { ProjectsGridItemStoryblok } from "@/types/component-types-sb"
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project }: { project: ProjectsGridItemStoryblok }) {
   const meta = [
     project.tags?.[0],
     project.year ? String(project.year) : undefined,
@@ -27,7 +27,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <AspectRatio ratio={4 / 5}>
           {/* Using next/image prevents layout shift */}
           <Image
-            src={project.cover}
+            src={project.cover?.filename ?? ''}
             alt={`${project.title} poster`}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
@@ -50,7 +50,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
         {/* Tag chips overlay */}
         <div className="absolute left-2 right-2 top-2 flex flex-wrap gap-1.5">
-          {project.tags.slice(0, 3).map((tag) => (
+          {project.tags?.slice(0, 3).map((tag) => (
             <Badge
               key={tag}
               variant="outline"

@@ -5,8 +5,9 @@ import { useState } from 'react'
 import { motion, stagger } from 'motion/react'
 import { storyblokEditable } from '@storyblok/react/rsc'
 import Vimeo from '@u-wave/react-vimeo'
-import { Card } from '@/components/ui/card'
+import * as Icons from 'lucide-react'
 import Icon from '@/components/icon/Icon'
+import { Card } from '@/components/ui/card'
 import type { HeroSectionStoryblok } from '@/types/component-types-sb'
 
 export default function HeroSection({blok}: {blok: HeroSectionStoryblok}) {
@@ -94,7 +95,7 @@ export default function HeroSection({blok}: {blok: HeroSectionStoryblok}) {
             >
               <Card className="h-full p-6 text-center bg-gradient-to-br from-primary/10 to-transparent hover:bg-primary/10 transition-all duration-300 will-change-transform hover:scale-[1.02] group rounded-none">
                 <Icon
-                  name={expertise.icon}
+                  name={expertise.icon as keyof typeof Icons}
                   className="w-8 h-8 mb-3 mx-auto text-primary group-hover:text-accent transition-colors duration-200"
                 />
                 <h3 className="font-semibold">

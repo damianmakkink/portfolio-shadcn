@@ -18,7 +18,7 @@ export function useSidebar() {
   return ctx
 }
 
-export default function Wrapper({ story }) {
+export default function Wrapper({ story }: { story: unknown }) {
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   return (

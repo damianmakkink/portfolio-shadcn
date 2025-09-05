@@ -2,6 +2,7 @@
 
 import { storyblokEditable } from '@storyblok/react/rsc'
 import { motion, stagger } from 'motion/react'
+import * as Icons from 'lucide-react'
 import Icon from '@/components/icon/Icon'
 import { Card } from '@/components/ui/card'
 import type { ContactSectionStoryblok } from '@/types/component-types-sb'
@@ -61,7 +62,7 @@ export default function ContactSection({blok}: {blok: ContactSectionStoryblok}) 
             >
               <Card className="p-6 bg-gradient-to-br from-primary/10 to-transparent hover:bg-primary/10 transition-colors group">
                 <Icon
-                  name={item.icon}
+                  name={item.icon as keyof typeof Icons}
                   className="w-8 h-8 mb-4 mx-auto text-primary transition-colors group-hover:text-accent"
                 />
                 <h3 className="font-semibold mb-2">

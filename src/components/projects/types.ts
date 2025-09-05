@@ -1,13 +1,11 @@
 export type Project = {
-  id: string
-  title: string
-  slug?: string
-  cover: string // URL or /public path
-  year?: number
+  title?: string
+  cover?: string
+  year?: string
   durationSec?: string
-  tags: string[]
+  tags?: string[]
   client?: string
   role?: string[]
-  createdAt?: string // ISO, used for Latest fallback
+  createdAt?: string
 }
 
